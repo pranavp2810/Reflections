@@ -1,0 +1,7 @@
+What happens when you initialize a repository? 
+Why do you need to do it?
+An empty repository is created with no commits. 
+So as to not keep files you dont want to keep track of. 
+
+
+
