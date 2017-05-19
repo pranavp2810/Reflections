@@ -1,7 +1,51 @@
 What happens when you initialize a repository? 
 Why do you need to do it?
-An empty repository is created with no commits. 
-So as to not keep files you dont want to keep track of. 
+	An empty repository is created with no commits. 
+	So as to not keep files you dont want to keep track of. 
+
+How is the staging area different from the working directory
+and the repository? What value do you think it offers?
+	This intermediary is a preperation area for files to be added. 
+	Only files in this area are going to be included in the commit 
+ 	executed next time. It helps to divide changes in the working 
+ 	directory into several commits, each of which consists of a group 
+	of changes that represent a logical change to the relevant files.
+
+How can you use the staging area to make sure you have one 
+commit per logical change?
+Add file where first logical change was made, then commit. 
+Then proceed to other logical changes. 
+
+What are some situations when branches would be helpful in keeping 
+your history organized? How would branches help?
+	when adding experimental or new feature which if after test proves working then add to main branch
+
+How do the diagrams help you visualize the branch structure?
+	This will help plan the development process. 
+	With using git log --graph (possibly with --oneline) [branch 
+	names...], you can easily tell how the whole branch structure was 
+	developed and at which point each branch was actually created. That 
+	would give you the overview of the whole structure of the project 
+	you are working on, so that you can tell what you are specifically 
+	focusing on and when and which branch to merge your work.
+
+What is the result of merging two branches together? 
+Why do we represent it in the diagram the way we do?
+	All the commits in the second branch is merged into the first 
+	branch, and the resluting merge commit becomes the new head of your 
+	current branch. The diagram shown by git log --graph cleary shows 
+	the merged commit has two parents, which correspond to the prior 
+	heads of each merged branch.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Pros:
+* Saves your time, especially when each non-conflicting merge is trivial.
+* Makes you concentrate on the changes which actually contain conflicts.
+
+Cons:
+* Can't thnink of any definite ones. Maybe can make it easier to overlook the potentially dangerous situation where two person are working on the same file at the same time.
+
+
 
 
 
